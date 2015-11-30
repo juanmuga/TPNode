@@ -1,22 +1,17 @@
 {
-  "name": "tpintegrador",
+  "name": "test-app",
   "version": "1.0.0",
-  "description": "tp",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/juanmuga/TPNode.git"
-  },
-  "author": "jbm",
+  "author": "todos",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/juanmuga/TPNode/issues"
-  },
-  "homepage": "https://github.com/juanmuga/TPNode#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "helmet": "^0.14.0"
   }
 }
