@@ -1,25 +1,15 @@
+$(document).ready(function() {
+  $("boton-crear").click(function() {
+    var data = [];
+    var inputCrear = document.getElementById("#inputBox").value;
+    var data = data.push(inputCrear);
+    var inputCrear = clear();
 
-var express = require('express');
-var app = express();
+   $( "boton-crear" ).append( document.createTextNode( "" ) );
 
-app.get('/crear', function (req, res) {
-  res.send("Usuario creado")	
-  
+    
+
+  });
 });
 
-app.get('/modifica', function (req, res) {
-  res.send("Modificar Usuario")	
-  
-});
-
-app.get('/eliminar', function (req, res) {
-  res.send("Eliminar Usuario")	
-  
-});
-
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+// hacer que al poner crear tome el array y lo ponga en un array que despues se va a guardar en un nuevoDato que va a tomar ajax para mandar al server

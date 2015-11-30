@@ -1,0 +1,14 @@
+.boton-crear {
+	width: 80px;
+	height: 50px;
+	background-color: blue;
+	margin-bottom: 50px;
+	margin-top: 50px;
+
+}
+
+.boton-eliminar {
+	width: 80px;
+	height: 50px;
+	background-color: red;
+}

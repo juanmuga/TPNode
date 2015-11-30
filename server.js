@@ -1,20 +1,22 @@
+var express = require("express"),
+helmet = require("helmet"),
+bodyParser = require("body-parser");
 
-var express = require('express');
 var app = express();
 
-app.get('/crear', function (req, res) {
-  res.send("Usuario creado")	
-  
+var objeto = {nombre:"pepe", edad:80};
+
+app.use(helmet());
+app.use(bodyParser.json());
+app.use(express.static("public"));
+
+app.get('/getData', function (req, res) {
+  res.send(JSON.stringify(objeto));
 });
 
-app.get('/modifica', function (req, res) {
-  res.send("Modificar Usuario")	
-  
-});
-
-app.get('/eliminar', function (req, res) {
-  res.send("Eliminar Usuario")	
-  
+app.post('/postData', function (req, res) {
+  console.log(req.body);
+  res.send("todo ok");
 });
 
 var server = app.listen(3000, function () {
